@@ -1,4 +1,4 @@
-module github.com/viniciusith/squirrel
+module github.com/ViniciusIth/squirrel
 
 go 1.18
 

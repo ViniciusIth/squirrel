@@ -106,7 +106,7 @@ func (b CommonTableExpressionsBuilder) Cte(cte string) CommonTableExpressionsBui
 }
 
 // As sets the expression for the Cte
-func (b CommonTableExpressionsBuilder) As(as SelectBuilder) CommonTableExpressionsBuilder {
+func (b CommonTableExpressionsBuilder) As(as Sqlizer) CommonTableExpressionsBuilder {
 	data := builder.GetStruct(b).(commonTableExpressionsData)
 	return builder.Append(b, "Ctes", cteExpr{as, data.CurrentCteName}).(CommonTableExpressionsBuilder)
 }
